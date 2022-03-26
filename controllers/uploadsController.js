@@ -3,9 +3,6 @@ const { StatusCodes } = require('http-status-codes');
 const CustomError = require('../errors');
 
 const uploadProductImage = async (req, res) => {
-	// check if file exists
-	// check format
-	// check size
 	if (!req.files) {
 		throw new CustomError.BadRequestError('No file uploaded');
 	}
